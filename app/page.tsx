@@ -3,7 +3,7 @@ import Contact from "@/components/ContactMe/contact";
 import Experience from "@/components/Experience/Experience";
 import { Home } from "@/components/Home";
 import Myprojects from "@/components/Projects/MyProjects";
-import Mycoding from "./coding/page";
+import Mycoding from "../components/coding/coding";
 
 export default function Page() {
   return (
