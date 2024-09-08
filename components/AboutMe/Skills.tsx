@@ -5,6 +5,15 @@ import { IoLogoHtml5, IoLogoNodejs, IoLogoPython } from "react-icons/io5";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { FaReact, FaGitAlt, FaPaintbrush } from "react-icons/fa6";
+import { SiTensorflow } from "react-icons/si";
+import { SiPytorch } from "react-icons/si";
+import { SiOpencv } from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
+import { SiDrizzle } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
+import { SiDjango } from "react-icons/si";
+import { DiDocker } from "react-icons/di";
+
 import {
   SiExpress,
   SiFramer,
@@ -15,14 +24,6 @@ import {
 } from "react-icons/si";
 
 const skills = [
-  {
-    name: "HTML",
-    icon: <IoLogoHtml5 className="text-4xl" />,
-  },
-  {
-    name: "CSS",
-    icon: <IoLogoCss3 className="text-4xl" />,
-  },
   {
     name: "Javascript",
     icon: <IoLogoJavascript className="text-4xl" />,
@@ -48,14 +49,6 @@ const skills = [
     icon: <SiExpress className="text-4xl" />,
   },
   {
-    name: "Git",
-    icon: <FaGitAlt className="text-4xl" />,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss className="text-4xl" />,
-  },
-  {
     name: "Prisma",
     icon: <SiPrisma className="text-4xl" />,
   },
@@ -72,13 +65,43 @@ const skills = [
     icon: <IoLogoPython className="text-4xl" />,
   },
   {
-    name: "Framer Motion",
-    icon: <SiFramer className="text-4xl" />,
+    name: "Git",
+    icon: <FaGitAlt className="text-4xl" />,
   },
+  {
+    name : 'Django',
+    icon : <SiDjango className="text-4xl" />,
+  },
+  {
+    name : 'Drizzle',
+    icon : <SiDrizzle className="text-4xl" />,
+  },
+  {
+    name : 'Tensorflow',
+    icon : <SiTensorflow className="text-4xl" />,
+  },
+  {
+    name : 'Pytorch',
+    icon : <SiPytorch className="text-4xl" />,
+  },
+  {
+    name : 'OpenCV',
+    icon : <SiOpencv className="text-4xl" />,
+  },
+  {
+    name : 'C++',
+    icon : <TbBrandCpp className="text-4xl" />,
+  },
+  {
+    name : 'Docker',
+    icon : <DiDocker className="text-4xl" />,
+  }
+
 ];
 
-const firstRow = skills.slice(0, skills.length / 2);
-const secondRow = skills.slice(skills.length / 2);
+const firstRow = skills.slice(0, skills.length / 3);
+const secondRow = skills.slice(skills.length / 3);
+const ThirdRow = skills.slice(2*skills.length/3);
 
 const ReviewCard = ({ icon, name }: { icon: any; name: string }) => {
   return (
@@ -102,6 +125,7 @@ const ReviewCard = ({ icon, name }: { icon: any; name: string }) => {
 export default function MarqueeDemo() {
   return (
     <div className="flex w-full flex-col items-center justify-center overflow-hidden bg-background gap-4 md:gap-10">
+      
       <Marquee pauseOnHover className="[--duration:20s] w-full">
         {firstRow.map((skill) => (
           <ReviewCard key={skill.name} {...skill} />
@@ -112,6 +136,12 @@ export default function MarqueeDemo() {
           <ReviewCard key={skill.name} {...skill} />
         ))}
       </Marquee>
+      <Marquee pauseOnHover className="[--duration:20s] w-full">
+        {ThirdRow.map((skill) => (
+          <ReviewCard key={skill.name} {...skill} />
+        ))}
+      </Marquee>
+
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
     </div>

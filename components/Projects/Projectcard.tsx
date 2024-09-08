@@ -12,7 +12,7 @@ import { GrGlobe } from "react-icons/gr";
 
 export default function ProjectCard({ data }: any) {
   return (
-    <Card className="w-full sm:w-[39%] rounded-lg overflow-hidden shadow-lg h-[520px] flex flex-col">
+    <Card className="w-full sm:w-[45%] rounded-lg overflow-hidden shadow-lg h-[720px] flex flex-col">
       <img
         src={data.imageUrl}
         alt="Project Thumbnail"
