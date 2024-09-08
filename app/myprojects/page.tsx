@@ -3,8 +3,7 @@
 import ProjectCard from "@/components/Projects/Projectcard";
 import { motion } from "framer-motion";
 
-
-export const projectsData = [
+const projectsData = [
   {
       title: "SaaS Collaborative Workspace",
       description: "A real-time collaborative workspace enabling multiple users to work simultaneously, incorporating real-time multiple-cursors, text selection, and presence indicators.",
