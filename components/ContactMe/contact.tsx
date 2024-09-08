@@ -29,12 +29,12 @@ export default function Contact() {
         at{" "}
         <span className="text-white underline">
           <Link
-            href="mailto:mayank14ughade@gmail.com"
+            href="mailto:tyagishashank118@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            mayank14ughade@gmail.com
+            tyagishashank118@gmail.com
           </Link>
         </span>
       </p>

@@ -20,7 +20,14 @@ const experiencesData = [
     location: "Mumbai, India",
     organization: "Prodigy Infotech",
     description:
-      "During my internship as a Front-end Developer at a Mumbai-based company, I had the opportunity to apply the React skills I acquired from YouTube tutorials in real-world projects. I actively contributed to the creation of their main webpage, gaining valuable hands-on experience in web development.",
+      `Engineered a scalable full-stack E-commerce platform using Next.js, React, and MongoDB, boosting
+user engagement by 30%
+• Developed a comprehensive Admin Panel, optimizing management workflows and increasing opera-
+tional efficiency by 25%
+• Implemented robust authentication using NextAuth/Auth.js, reducing unauthorized access attempts
+by 40%
+• Established database security protocols, mitigating potential vulnerabilities by 35% through opti-
+mized input validation`,
     icon: <IoCodeWorking className="w-[40px] h-[40px]" />,
     date: "May 2023 - July 2023",
   },

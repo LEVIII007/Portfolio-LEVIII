@@ -10,7 +10,7 @@ export const codingData = [
   {
       title: "LeetCode Rating Graph",
       description: "I have solved 200+ problems on LeetCode making me Knight Rated on the platform",
-      githubLink: "https://github.com/LEVIII007/SaaS_Workspace",
+      githubLink: "https://leetcode.com/u/shashank_2375/",
       imageUrl: "/leetcode.png",
   },
 ] as const;
@@ -28,7 +28,7 @@ export default function Mycoding() {
       transition={{ ease: "easeOut", duration: 0.5 }}
       className="w-full flex flex-col items-center justify-center mt-[200px]"
     >
-      <h1 className="text-4xl font-bold mb-7">DSA profile</h1>
+      <h1 className="text-4xl font-bold mb-7">DSA profiles</h1>
 
       <div className="flex flex-wrap gap-5 items-center justify-center ">
         {codingData.map((data) => (
