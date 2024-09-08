@@ -57,7 +57,7 @@ const projectsData = [
       githubLink: "https://github.com/LEVIII007/Chat-Sphere",
       imageUrl: "/sphere.png",
   },
-] as const;
+];
 
 export default function page() {
   return (

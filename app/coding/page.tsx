@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
-import CodingCard from "./coding-card";
+import CodingCard from "../../components/Projects/coding-card";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
