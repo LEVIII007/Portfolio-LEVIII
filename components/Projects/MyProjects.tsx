@@ -51,7 +51,7 @@ export const projectsData = [
       tags: ["Python", "Streamlit", "PyTorch", "Hugging Face", "Transformers"],
       githubLink: "https://github.com/LEVIII007/Caption-Generation-for-images",
       liveLink: "https://huggingface.co/spaces/LEVIII007/Visionary_Captions",
-      imageUrl: "/generator.png",
+      imageUrl: "/gen.png",
   },
   {
       title: "Chat-Sphere",
