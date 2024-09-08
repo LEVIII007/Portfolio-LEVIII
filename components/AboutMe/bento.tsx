@@ -110,8 +110,8 @@ const bentoItems: BentoItem[] = [
           <Image
             src="/golang.png"
             alt="current learning"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
           />
         </div>
       </div>
@@ -121,7 +121,7 @@ const bentoItems: BentoItem[] = [
 
 const BentoGrid: React.FC = () => {
   return (
-    <div className="flex items-center justify-center flex-wrap sm:w-[1000px] gap-2 mt-10">
+    <div className="flex items-center justify-center flex-wrap sm:w-[1100px] h-[1000px] gap-2 mt-10">
       <h1 className="sm:text-4xl text-xl font-semibold sm:mb-5">About me</h1>
       <div className="flex flex-col md:flex-row w-full gap-2">
         {bentoItems.slice(0, 2).map((item) => (
@@ -138,13 +138,14 @@ const BentoGrid: React.FC = () => {
         {bentoItems.slice(2, 4).map((item) => (
           <div key={item.id} className={`p-2 ${item.size}`}>
             <div
-              className={`h-full rounded-lg flex items-center justify-center border`}
+              className={`h-[340px] rounded-lg flex items-center justify-center border`}
             >
               {item.component}
             </div>
           </div>
         ))}
       </div>
+      
       <Link href="/about_me">
         <Button>More About Me</Button>
       </Link>
