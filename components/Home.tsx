@@ -45,7 +45,7 @@ export function Home() {
         >
           <Button asChild>
             <Link
-              href="/Shashank_tyagi_resume.pdf"
+              href="/Shashank_tyagi_res_01.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

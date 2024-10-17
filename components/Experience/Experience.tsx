@@ -8,8 +8,8 @@ import { useInView } from "react-intersection-observer";
 const experiencesData = [
   {
     title: "Computer-Science and Engineering",
-    location: "Indian Institute of Information Technology, Nagpur",
-    organization: "Pune University",
+    location: "Nagpur",
+    organization: "Indian Institute of Information Technology, Nagpur",
     description:
       "I am nearing the completion of my computer engineering degree, currently in the pre-final year. ",
     icon: <FaGraduationCap className="w-[40px] h-[40px]" />,

@@ -24,6 +24,13 @@ export const projectsData = [
       imageUrl: "/Seller-sim.png",
   },
   {
+    title: "Online Scalable Cloud IDE",
+    description: "Built a fully scalable cloud-based IDE, similar to Replit, that allows developers to write, run, and collaborate on code in real-time. The platform utilizes Docker, Kubernetes, Minikube, and Node.js to ensure seamless scalability and efficient resource management. It supports multiple programming languages and provides an integrated development environment accessible from any browser.",
+    tags: ["Docker", "Kubernetes", "Minikube", "Node.js", "Tailwind CSS", "Typescript"],
+    githubLink: "https://github.com/LEVIII007/my_IDE",
+    imageUrl: "/IDE.png"
+  },
+  {
       title: "Echo-Sign Language Interpreter",
       description: "A website that uses a CNN model to interpret sign language gestures and convert them to text. The app is built with React and Tailwind CSS.",
       tags: ["React", "Tailwind CSS", "JavaScript", "Vercel", "CNN", "OpenCV", "Flask", "TensorFlow"],
