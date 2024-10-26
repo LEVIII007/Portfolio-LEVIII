@@ -16,9 +16,8 @@ const experiencesData = [
     date: "2022- present",
   },
   {
-    title: "Front-End Developer Intern",
-    location: "Mumbai, India",
-    organization: "Prodigy Infotech",
+    title: "Backend Developer Intern (Remote)",
+    organization: "Schachner Industries Private Limited",
     description:
       `Engineered a scalable full-stack E-commerce platform using Next.js, React, and MongoDB, boosting
 user engagement by 30%

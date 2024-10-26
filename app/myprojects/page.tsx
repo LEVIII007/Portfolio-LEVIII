@@ -21,6 +21,14 @@ const projectsData = [
       imageUrl: "/Seller-sim.png",
   },
   {
+    title: "Finance-Assistant",
+    description: "A financial education and stock recommendation system that leverages real-time data access through a chatbot using sockets. It incorporate personalized stock recommendations based on user-defined financial profiles and risk tolerance by analysing financial reports of company. The system will visualize key financial metrics from selected companies, facilitating deeper analysis and understanding of financial health. By integrating reliable financial reports and educational resources, the platform aims to enhance users' investment decision-making capabilities.",
+    tags: ["Next.js", "Tailwind CSS", "Typescript","Vercel AI SDK", "Langchain", "Open-AI API"],
+    githubLink: "https://github.com/LEVIII007/Investo-Bot",
+    // liveLink: "https://phone-case-ecommerce.vercel.app",
+    imageUrl: "/investo.png",
+},
+  {
       title: "Echo-Sign Language Interpreter",
       description: "A website that uses a CNN model to interpret sign language gestures and convert them to text. The app is built with React and Tailwind CSS.",
       tags: ["React", "Tailwind CSS", "JavaScript", "Vercel", "CNN", "OpenCV", "Flask", "TensorFlow"],

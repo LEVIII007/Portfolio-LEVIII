@@ -24,6 +24,14 @@ export const projectsData = [
       imageUrl: "/Seller-sim.png",
   },
   {
+    title: "Finance-Assistant",
+    description: "A financial education and stock recommendation system that leverages real-time data access through a chatbot using sockets. It incorporate personalized stock recommendations based on user-defined financial profiles and risk tolerance by analysing financial reports of company. The system will visualize key financial metrics from selected companies, facilitating deeper analysis and understanding of financial health. By integrating reliable financial reports and educational resources, the platform aims to enhance users' investment decision-making capabilities.",
+    tags: ["Next.js", "Tailwind CSS", "Typescript","Vercel AI SDK", "Langchain", "Open-AI API"],
+    githubLink: "https://github.com/LEVIII007/Investo-Bot",
+    // liveLink: "https://phone-case-ecommerce.vercel.app",
+    imageUrl: "/investo.png",
+},
+  {
     title: "Online Scalable Cloud IDE",
     description: "Built a fully scalable cloud-based IDE, similar to Replit, that allows developers to write, run, and collaborate on code in real-time. The platform utilizes Docker, Kubernetes, Minikube, and Node.js to ensure seamless scalability and efficient resource management. It supports multiple programming languages and provides an integrated development environment accessible from any browser.",
     tags: ["Docker", "Kubernetes", "Minikube", "Node.js", "Tailwind CSS", "Typescript"],
