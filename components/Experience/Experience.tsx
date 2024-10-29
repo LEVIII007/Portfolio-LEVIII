@@ -29,6 +29,7 @@ by 40%
 mized input validation`,
     icon: <IoCodeWorking className="w-[40px] h-[40px]" />,
     date: "May 2023 - July 2023",
+    location: "Remote",
   },
 ] as const;
 

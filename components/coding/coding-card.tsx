@@ -8,12 +8,15 @@ import {
   import Link from "next/link";
   import { SiLeetcode } from "react-icons/si";
   import { GrGlobe } from "react-icons/gr";
+  import Image from 'next/image';
+
+
   
   
   export default function CodngCard({ data }: any) {
     return (
       <Card className="w-full sm:w-[100%] rounded-lg overflow-hidden shadow-lg h-[520px] flex flex-col">
-        <img
+        <Image
           src={data.imageUrl}
           alt="Project Thumbnail"
           width={400}

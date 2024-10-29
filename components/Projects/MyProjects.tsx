@@ -56,8 +56,8 @@ export const projectsData = [
   {
       title: "Text-Synth",
       description: "Django website with implementation of 'Attention is All You Need' paper and its application in text generation, translation, and summarization.",
-      tags: ["Django", "DjangoREST Framework", "JWT", "Bcrypt", "CORS", "React", "Transformers", "PyTorch"],
-      githubLink: "",
+      tags: ["Django", "DjangoREST Framework", "React", "Transformers", "PyTorch"],
+      githubLink: "https://github.com/LEVIII007/Text-Synth",
       imageUrl: "/synth.png",
   },
   {
@@ -76,6 +76,15 @@ export const projectsData = [
       liveLink: "",
       imageUrl: "/sphere.png",
   },
+//   {
+//     title: "In-House DNS server",
+//     description: "A DNS server that resolves domain names to IP addresses and vice versa. It is built using Python",
+//     tags: [ "Python", "Sockets"],
+//     githubLink: "https://github.com/LEVIII007/Chat-Sphere",
+//     liveLink: "",
+//     imageUrl: "/sphere.png",
+// },
+
 ] as const;
 
 export default function Myprojects() {
