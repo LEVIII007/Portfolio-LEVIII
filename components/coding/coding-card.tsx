@@ -1,51 +1,69 @@
-import {
-    Card,
-    CardContent,
-    CardTitle,
-    CardDescription,
-  } from "@/components/ui/card";
-  import { Badge } from "@/components/ui/badge";
-  import Link from "next/link";
-  import { SiLeetcode } from "react-icons/si";
-  import { GrGlobe } from "react-icons/gr";
-  import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+const CodingProfiles: React.FC = () => {
+  return (
+    <div className="bg-black text-gray-100 py-16">
+      <div className="container mx-auto px-4" style={{ width: 1200 }}>
+        <h2 className="text-3xl font-bold mb-8 text-center">My Coding Profiles</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <ProfileCard 
+        title="LeetCode Profile"
+        imageSrc="/leetcode1.png?height=200&width=500"
+        imageAlt="LeetCode Profile"
+        link="https://leetcode.com/yourusername"
+        description="Solved X problems on LeetCode, focusing on medium and hard difficulty questions."
+          />
+          <ProfileCard 
+        title="Codeforces Profile"
+        imageSrc="/codeforces.png?height=200&width=500"
+        imageAlt="Codeforces Profile"
+        link="https://codeforces.com/profile/yourusername"
+        description="Current Codeforces rating: X. Regularly participate in contests to improve problem-solving skills."
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+interface ProfileCardProps {
+  title: string
+  imageSrc: string
+  imageAlt: string
+  link: string
+  description: string
+}
+
+function ProfileCard({ title, imageSrc, imageAlt, link, description }: ProfileCardProps) {
+  return (
+    <Card className="bg-gray-980 border-gray-700 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1">
+      <CardHeader>
+        <CardTitle className="text-xl font-semibold text-gray-100">{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="bg-gray-950 border-gray-600 border-2 rounded-xl p-4">
+          <div className="overflow-hidden rounded-lg">
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={400}
+                height={200}
+                className="rounded-lg transition-transform duration-500 hover:scale-105"
+              />
+            </Link>
+          </div>
+        </div>
+        <p className="mt-4 text-gray-300 transition-colors duration-300 ease-in-out hover:text-gray-100">
+          {description}
+        </p>
+      </CardContent>
+    </Card>
+  )
+}
 
 
-  
-  
-  export default function CodngCard({ data }: any) {
-    return (
-      <Card className="w-full sm:w-[100%] rounded-lg overflow-hidden shadow-lg h-[520px] flex flex-col">
-        <Image
-          src={data.imageUrl}
-          alt="Project Thumbnail"
-          width={400}
-          height={500}
-          className="w-full h-50 object-cover"
-        />
-        <CardContent className="p-6 space-y-4 flex flex-col flex-grow justify-between">
-          <div>
-            <CardTitle className="text-xl font-semibold">{data.title}</CardTitle>
-            <CardDescription className="text-muted-foreground mt-2">
-              {data.description}
-            </CardDescription>
-          </div>
-          <div className="flex items-center gap-4 mt-auto">
-            {data.githubLink && (
-              <Link
-                href={data.githubLink}
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                prefetch={false}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiLeetcode className="w-4 h-4" />
-                Profile
-              </Link>
-            )}
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-  
+export default CodingProfiles
+

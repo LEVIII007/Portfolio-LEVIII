@@ -1,19 +1,21 @@
-import AboutMe from "@/components/AboutMe/AboutMe";
-import Contact from "@/components/ContactMe/contact";
 import Experience from "@/components/Experience/Experience";
 import { Home } from "@/components/Home";
-import Myprojects from "@/components/Projects/MyProjects";
-import Mycoding from "../components/coding/coding";
+import Projects from "@/components/Projects/projects1";
+import CodingProfiles from "../components/coding/coding-card";
+import About from "../components/AboutMe/about";
+import Skills from "../components/AboutMe/skills2";
 
 export default function Page() {
   return (
-    <div className="p-5 lg:container">
+    <div className="bg-black text-white">
+      <div className="mx-auto max-w-screen-2xl">
       <Home />
-      <AboutMe />
-      <Mycoding />
-      <Myprojects />
+      <About />
+      <Skills />
       <Experience />
-      <Contact />
+      <CodingProfiles />
+      <Projects />
+    </div>
     </div>
   );
 }

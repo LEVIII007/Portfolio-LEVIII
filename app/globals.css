@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    font-size: 18px; /* or any size you prefer */
+  }
   :root {
     --background: 0 0% 0%; /* Black background */
     --foreground: 210 40% 98%;

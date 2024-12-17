@@ -134,7 +134,7 @@ export default function page() {
           <p className="my-5">
             I'm a 21-year-old full-stack developer who loves building web
             applications. I started coding when I was 19 and have been hooked
-            ever since. I also have interests in machine learning and AI. specially in NLP.
+            ever since. I also have interests in machine learning and GenAI. specially in NLP.
             Warning: Hiring me may result in sudden bursts of innovation.
           </p>
 

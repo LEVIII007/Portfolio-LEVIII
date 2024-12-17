@@ -17,10 +17,9 @@ const experiencesData = [
   },
   {
     title: "Backend Developer Intern (Remote)",
-    organization: "Schachner Industries Private Limited",
+    organization: "CodeStam Technologies",
     description:
-      `Engineered a scalable full-stack E-commerce platform using Next.js, React, and MongoDB, boosting
-user engagement by 30%
+      `Engineered scalable full-stack end-to-end E-commerce platforms using Next.js, React, and PostgreSQL for businesses.
 • Developed a comprehensive Admin Panel, optimizing management workflows and increasing opera-
 tional efficiency by 25%
 • Implemented robust authentication using NextAuth/Auth.js, reducing unauthorized access attempts
@@ -28,7 +27,7 @@ by 40%
 • Established database security protocols, mitigating potential vulnerabilities by 35% through opti-
 mized input validation`,
     icon: <IoCodeWorking className="w-[40px] h-[40px]" />,
-    date: "May 2023 - July 2023",
+    date: "May 2024 - July 2024",
     location: "Remote",
   },
 ] as const;
@@ -72,7 +71,7 @@ export default function Experience() {
         </TracingBeam>
 
         <section className="w-full flex sm:hidden flex-col gap-10 items-center justify-center scroll-mt-28 py-[30px] ">
-          <div className="flex flex-col gap-10 max-w-[900px]">
+          <div className="flex flex-col gap-10 max-w-[1000px]">
             {experiencesData.map((items, index) => (
               <div key={index}>
                 <div className=" p-5 w-full border rounded-lg">

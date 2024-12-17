@@ -72,21 +72,21 @@ export default function SmallNav() {
           <DropdownMenuItem>
             <div className="flex items-center sm:gap-5 ml-3 gap-3">
               <Link
-                href="https://github.com/MayankUghade"
+                href="https://github.com/LEVIII007"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub className="text-2xl" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/mayank-ughade-63aab7229/"
+                href="https://www.linkedin.com/in/shashank-tyagi-783093247/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin className="text-2xl" />
               </Link>
               <Link
-                href="https://x.com/MayankUghade3"
+                href="https://twitter.com/tyagi_Shashankk"
                 target="_blank"
                 rel="noopener noreferrer"
               >

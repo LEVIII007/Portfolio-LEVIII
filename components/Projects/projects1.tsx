@@ -4,9 +4,10 @@ import Regal from "@/public/images/regal.jpg";
 import Bytes from "@/public/images/bytes.jpg";
 import Page from "@/public/images/page.jpg";
 import Link from "next/link";
-import {ProjectCard} from "../../components/Projects/Projectcard";
+import { ProjectCard, ProjectCardKing } from "./Projectcard";
+import { features } from "process";
 
-const projectsData = [
+export const projectsData = [
     {
       title: "SaaS Collaborative Workspace",
       description:
@@ -154,12 +155,40 @@ const projectsData = [
   },
   ];
 
+  const ProjectKingData = [
+    {
+      title: "z-secure",
+      description:
+        "A npm package that provides security against commonn web attacks like Ddos, XSS, CSRF, sql injection, local file inclusion and more using advanced deteciton rate limiting and detection algorithms",
+      tags: [
+        "Node.js",
+        "TypeScript",
+        "Express.js",
+        "Redis",
+        "Postgres",
+      ],
+      githubLink: "https://github.com/LEVIII007/zzz-Secure",
+      liveLink: "https://www.npmjs.com/package/z-secure",
+      imageUrl: "/zsecure.webp",
+      features : ["z-secure detects the common web attack patterns and counts and limits the number of actions by key and protects from DDoS and brute force attacks at any scale.", 
+        "works with browser memory, Redis and PostgreSQL", "No race conditions in memory", "No production dependencies", "TypeScript declaration bundled"]
+    }
+  ]
+
+
+
+
 const Projects = () => {
   return (
     <div className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-6 sm:px-16">
       <div className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center">
         Projects
       </div>
+      <div>
+        {ProjectKingData.map((project) => (
+          <ProjectCardKing key={project.title} {...project} />
+        ))}
+        </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
       {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />

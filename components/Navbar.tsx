@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between p-5 lg:container">
         <div className="flex items-center gap-5 ">
           <Link href="/">
-            <Image src="/letter-s.png" alt="Logo" width={27} height={27} />
+            <Image src="/logo_st.webp" alt="Logo" width={30} height={30} />
           </Link>
           <div className="sm:flex hidden items-center gap-5">
             <Link
@@ -61,7 +61,7 @@ export default function Navbar() {
             <FaLinkedin className="text-2xl" />
           </Link>
           <Link
-            href="https://x.com/Reviii007"
+            href="https://twitter.com/tyagi_Shashankk"
             target="_blank"
             rel="noopener noreferrer"
           >

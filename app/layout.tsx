@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const recoleta = localFont({
+  src: "../public/Recoleta-Bold.ttf",
+  variable: "--font-recoleta",
+});
 
 export const metadata: Metadata = {
   title: "Shashank Tyagi",
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className}`}>
+      <body className={`${recoleta.variable}`}>
         <Navbar />
         {children}
         <Toaster />
