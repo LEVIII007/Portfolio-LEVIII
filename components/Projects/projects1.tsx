@@ -184,7 +184,7 @@ const Projects = () => {
       <div className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center">
         Projects
       </div>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         {ProjectKingData.map((project) => (
           <ProjectCardKing key={project.title} {...project} />
         ))}

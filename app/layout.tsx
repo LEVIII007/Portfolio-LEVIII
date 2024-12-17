@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/components/Footer";
+import Contact from "@/components/Footer";
 
 const recoleta = localFont({
   src: "../public/Recoleta-Bold.ttf",
@@ -27,7 +27,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Toaster />
-        <Footer />
+        <Contact />
       </body>
     </html>
   );

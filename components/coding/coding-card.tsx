@@ -13,14 +13,14 @@ const CodingProfiles: React.FC = () => {
         imageSrc="/leetcode1.png?height=200&width=500"
         imageAlt="LeetCode Profile"
         link="https://leetcode.com/yourusername"
-        description="Solved X problems on LeetCode, focusing on medium and hard difficulty questions."
+        description="I regularly participate in leetcode contests and have rating 1990+ which makes me top 4% programmer on leetcode. I have Solved 200+ problems on LeetCode."
           />
           <ProfileCard 
         title="Codeforces Profile"
         imageSrc="/codeforces.png?height=200&width=500"
         imageAlt="Codeforces Profile"
         link="https://codeforces.com/profile/yourusername"
-        description="Current Codeforces rating: X. Regularly participate in contests to improve problem-solving skills."
+        description="Current Codeforces rating: 1330. In my first year. I had passion for competitive programming which have helped in my logical thinking ability."
           />
         </div>
       </div>

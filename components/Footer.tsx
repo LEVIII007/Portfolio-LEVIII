@@ -4,9 +4,9 @@ import { FaLink, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
 
-const Footer = () => {
+const Contact = () => {
   return (
-    <div className="bg-black">
+    <div id = "contact" className="bg-black">
       <div className="px-8 md:px-20 sm:px-10 py-12 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 justify-start mb-2.5 font-bold">
           <FaLink className="size-5" />
@@ -58,4 +58,4 @@ const Footer = () => {
 }
 
 
-export default Footer;
+export default Contact;
