@@ -17,7 +17,9 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.2.1",
     "@react-email/components": "^0.0.17",
+    "@react-three/fiber": "^8.17.14",
     "@tabler/icons-react": "^3.8.0",
+    "@types/three": "^0.173.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
@@ -37,7 +39,8 @@
     "resend": "^3.4.0",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "@types/node": "^20",

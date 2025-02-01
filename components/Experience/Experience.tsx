@@ -1,9 +1,6 @@
-"use client";
 import { IoCodeWorking, IoLaptopOutline } from "react-icons/io5";
 import { TracingBeam } from "../ui/tracing-beam";
 import { FaGraduationCap } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const experiencesData = [
   {
@@ -33,17 +30,9 @@ mized input validation`,
 ] as const;
 
 export default function Experience() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-      transition={{ ease: "easeOut", duration: 0.5 }}
-      className="mt-[200px] flex items-center flex-col justify-center scroll-mt-28"
+    <div
+      className="mt-[200px] flex items-center flex-col justify-center scroll-mt-28 transition-opacity duration-500 ease-out transform opacity-100 translate-y-0"
       id="experience"
     >
       <h1 className="font-bold text-3xl">My experience</h1>
@@ -53,7 +42,7 @@ export default function Experience() {
             <div className="flex flex-col gap-10 max-w-[900px]">
               {experiencesData.map((items, index) => (
                 <div key={index}>
-                  <div className=" p-5 w-full border rounded-lg">
+                  <div className="p-5 w-full border rounded-lg">
                     <h1 className="font-semibold text-2xl capitalize">
                       {items.title}
                     </h1>
@@ -70,11 +59,11 @@ export default function Experience() {
           </section>
         </TracingBeam>
 
-        <section className="w-full flex sm:hidden flex-col gap-10 items-center justify-center scroll-mt-28 py-[30px] ">
+        <section className="w-full flex sm:hidden flex-col gap-10 items-center justify-center scroll-mt-28 py-[30px]">
           <div className="flex flex-col gap-10 max-w-[1000px]">
             {experiencesData.map((items, index) => (
               <div key={index}>
-                <div className=" p-5 w-full border rounded-lg">
+                <div className="p-5 w-full border rounded-lg">
                   <h1 className="font-semibold text-2xl capitalize">
                     {items.title}
                   </h1>
@@ -90,6 +79,6 @@ export default function Experience() {
           </div>
         </section>
       </div>
-    </motion.div>
+    </div>
   );
 }

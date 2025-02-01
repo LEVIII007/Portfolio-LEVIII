@@ -1,9 +1,4 @@
-import { FaGithub } from "react-icons/fa6";
-import Image from "next/image";
-import Regal from "@/public/images/regal.jpg";
-import Bytes from "@/public/images/bytes.jpg";
-import Page from "@/public/images/page.jpg";
-import Link from "next/link";
+
 import { ProjectCard, ProjectCardKing } from "./Projectcard";
 import { features } from "process";
 
@@ -24,6 +19,21 @@ export const projectsData = [
       githubLink: "https://github.com/LEVIII007/SaaS_Workspace",
       liveLink: "https://saas-workspace.vercel.app/",
       imageUrl: "/Cypress.png",
+    },
+    {
+      title: "Cloud Vault",
+      description:
+        "A subscription-based cloud storage service offering scalable and secure file storage, sharing, and quick downloads via AWS CloudFront.",
+      tags: [
+        "Node.js",
+        "AWS S3",
+        "Lambda",
+        "CloudFront",
+        "TypeScript",
+      ],
+      githubLink: "https://github.com/LEVIII007/CloudVault",
+      liveLink: "https://cloud-vault-frontend.vercel.app/",
+      imageUrl: "/cloudvault.png",
     },
   {
     title: "Sales Person Simulator GPT",
@@ -157,45 +167,54 @@ export const projectsData = [
 
   const ProjectKingData = [
     {
-      title: "z-secure",
+      title: "z-secure SaaS Platform",
       description:
-        "A npm package that provides security against commonn web attacks like Ddos, XSS, CSRF, sql injection, local file inclusion and more using advanced deteciton rate limiting and detection algorithms",
+        "Originally an npm package, now evolved into a full-fledged SaaS platform providing comprehensive web security solutions, including bot protection, rate limiting, SQL injection prevention, and an SDK for easy integration.",
       tags: [
         "Node.js",
         "TypeScript",
         "Express.js",
         "Redis",
-        "Postgres",
+        "PostgreSQL",
+        "AWS Lambda",
+        "Prisma",
       ],
       githubLink: "https://github.com/LEVIII007/zzz-Secure",
-      liveLink: "https://www.npmjs.com/package/z-secure",
+      liveLink: "https://zsecure-documentation.vercel.app/docs",
       imageUrl: "/zsecure.webp",
-      features : ["z-secure detects the common web attack patterns and counts and limits the number of actions by key and protects from DDoS and brute force attacks at any scale.", 
-        "works with browser memory, Redis and PostgreSQL", "No race conditions in memory", "No production dependencies", "TypeScript declaration bundled"]
+      features : [
+        "Advanced rate limiting, bot protection, and SQL injection prevention with ultra-low latency.",
+        "Full SaaS model for businesses requiring high-security API protection.",
+        "Provides an SDK for seamless integration into various applications.",
+        "Serverless architecture for instant scaling and high availability.",
+        "Works with browser memory, Redis, and PostgreSQL.",
+        "No race conditions in memory.",
+        "TypeScript declaration bundled."
+      ]
     }
-  ]
+  ];
 
 
-
-
-const Projects = () => {
-  return (
-    <div className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-6 sm:px-16">
-      <div className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center">
-        Projects
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        {ProjectKingData.map((project) => (
-          <ProjectCardKing key={project.title} {...project} />
-        ))}
+  
+  const Projects = () => {
+    return (
+      <div className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-4 sm:px-6 lg:px-8"
+          id="projects">
+        <div className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center mb-8">Projects</div>
+        <div className="grid grid-cols-1 gap-8">
+          {ProjectKingData.map((project) => (
+            <ProjectCardKing key={project.title} {...project} />
+          ))}
         </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-      {projectsData.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+          {projectsData.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Projects;
+    )
+  }
+  
+  export default Projects
+  
+  
