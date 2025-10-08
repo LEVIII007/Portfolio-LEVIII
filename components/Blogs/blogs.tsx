@@ -9,6 +9,9 @@ export function Blogs() {
       <h2 id="blogs-title" className="text-xl font-medium mb-4">
         Blog Posts
       </h2>
+      <p className="text-[var(--text-secondary)] mb-6">
+        I write about software development, sharing insights and experiences from my journey in tech.
+      </p>
       <div className="grid gap-4">
         {blogs.map((blog, index) => (
           <BlogItem

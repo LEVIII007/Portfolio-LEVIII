@@ -271,6 +271,9 @@ const Projects = () => {
       <h2 id="projects-title" className="text-xl font-medium mb-4">
         Projects
       </h2>
+      <p className="text-[var(--text-secondary)] mb-6">
+        A collection of my work spanning from AI applications to full-stack projects.
+      </p>
       <div className="grid gap-4">
         {displayedProjects.map((project) => (
           <ProjectItem key={project.title} {...project} />

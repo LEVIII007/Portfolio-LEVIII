@@ -1,6 +1,6 @@
 export const experience = [
   {
-    company: "Trench.ag",
+    company: "Trench Exchange",
     role: "Founding Backend Engineer",
     period: "May 2025 — Oct 2025",
     summary: "Developed automated trading services and optimized databases for high-performance Solana DEX operations.",

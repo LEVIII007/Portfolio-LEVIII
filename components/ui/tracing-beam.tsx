@@ -26,10 +26,24 @@ export const TracingBeam = ({
   const [svgHeight, setSvgHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
-    }
-  }, []);
+    const updateHeight = () => {
+      if (contentRef.current) {
+        setSvgHeight(contentRef.current.offsetHeight);
+      }
+    };
+
+    // Update height on mount and when window resizes
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    
+    // Use a timeout to recalculate after content has fully rendered
+    const timer = setTimeout(updateHeight, 100);
+
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+      clearTimeout(timer);
+    };
+  }, [children]);
 
   const y1 = useSpring(
     useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
