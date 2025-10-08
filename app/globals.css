@@ -36,6 +36,14 @@
     --ring: 212.7 26.8% 83.9%;
 
     --radius: 0.5rem;
+
+    /* Card theme tokens for components using CSS variables */
+    /* Subtle black-grey background with hover elevation */
+    --card-background: hsl(0 0% 6% / 1); /* near-black grey */
+    --hover-background: hsl(0 0% 10% / 1);
+    --card-border: hsl(0 0% 14% / 1);
+    --text-primary: hsl(210 40% 98% / 1);
+    --text-muted: hsl(215 20% 65% / 1);
   }
 }
 
