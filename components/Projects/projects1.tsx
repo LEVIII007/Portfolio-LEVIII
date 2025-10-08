@@ -1,40 +1,89 @@
-
-import { ProjectCard, ProjectCardKing } from "./Projectcard";
-import { features } from "process";
+'use client';
+import { ProjectItem } from "../ui/project-item";
+import { useState } from "react";
 
 export const projectsData = [
-    {
-      title: "SaaS Collaborative Workspace",
-      description:
-        "A real-time collaborative workspace enabling multiple users to work simultaneously, incorporating real-time multiple-cursors, text selection, and presence indicators.",
-      tags: [
-        "Next.js",
-        "Tailwind CSS",
-        "TypeScript",
-        "Postgres",
-        "Shadcn UI",
-        "Supabase",
-        "socket.io",
-      ],
-      githubLink: "https://github.com/LEVIII007/SaaS_Workspace",
-      liveLink: "https://saas-workspace.vercel.app/",
-      imageUrl: "/Cypress.png",
-    },
-    {
-      title: "Cloud Vault",
-      description:
-        "A subscription-based cloud storage service offering scalable and secure file storage, sharing, and quick downloads via AWS CloudFront.",
-      tags: [
-        "Node.js",
-        "AWS S3",
-        "Lambda",
-        "CloudFront",
-        "TypeScript",
-      ],
-      githubLink: "https://github.com/LEVIII007/CloudVault",
-      liveLink: "https://cloud-vault-frontend.vercel.app/",
-      imageUrl: "/cloudvault.png",
-    },
+  {
+    title: "ConverslyAI",
+    description: "Conversly is the complete platform for building & deploying AI support agents for your business.",
+    tags: ["Next.js", "Node.js", "Python", "Langgraph", "AWS lambda", "ec2"],
+    githubLink: "",
+    liveLink: "https://conversly.shashankkk.site",
+    imageUrl: "/conversly.png",
+    features: [
+      "Deploy chatbots with tailored responses using custom knowledge bases for specific business needs.",
+      "Easily embed agentic RAG chatbots on websites, Discord, and Slack channels with minimal code.",
+      "Grounded Answers with Citations, synthesizes information from multiple sources to provide comprehensive answers.",
+      "Automatically refreshing and secure data connectors that support all common data sources.",
+    ]
+  },
+  {
+    title: "Z-secure",
+    description:
+      "Originally an npm package, now evolved into a full-fledged SaaS platform providing comprehensive web security solutions, including bot protection, rate limiting, SQL injection prevention, and an SDK for easy integration.",
+    tags: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "Redis",
+      "PostgreSQL",
+      "AWS Lambda",
+      "Prisma",
+    ],
+    githubLink: "https://github.com/LEVIII007/zzz-Secure",
+    liveLink: "https://zsecure-documentation.vercel.app/docs",
+    imageUrl: "/zsecure.webp",
+    features: [
+      "Advanced rate limiting, bot protection, and SQL injection prevention with ultra-low latency.",
+      "Full SaaS model for businesses requiring high-security API protection.",
+      "Provides an SDK for seamless integration into various applications.",
+      "Serverless architecture for instant scaling and high availability.",
+      "Works with Redis, and PostgreSQL.",
+    ]
+  },
+  {
+    title: "Collaborative Workspace",
+    description:
+      "A real-time collaborative workspace enabling multiple users to work simultaneously, incorporating real-time multiple-cursors, text selection, and presence indicators.",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Postgres",
+      "Shadcn UI",
+      "Supabase",
+      "socket.io",
+    ],
+    githubLink: "https://github.com/LEVIII007/SaaS_Workspace",
+    liveLink: "https://saas-workspace.vercel.app/",
+    imageUrl: "/Cypress.png",
+    features: [
+      "Real-time collaboration with multiple cursors and text selection",
+      "Presence indicators showing active users",
+      "Secure authentication and authorization with Supabase",
+    ]
+  },
+  {
+    title: "Cloud Vault",
+    description:
+      "A subscription-based cloud storage service offering scalable and secure file storage, sharing, and quick downloads via AWS CloudFront.",
+    tags: [
+      "Node.js",
+      "AWS S3",
+      "Lambda",
+      "CloudFront",
+      "TypeScript",
+    ],
+    githubLink: "https://github.com/LEVIII007/CloudVault",
+    liveLink: "https://cloud-vault-frontend.vercel.app/",
+    imageUrl: "/cloudvault.png",
+    features: [
+      "Scalable cloud storage with AWS S3",
+      "Fast content delivery via CloudFront CDN",
+      "Serverless architecture with AWS Lambda",
+      "Subscription-based pricing model"
+    ]
+  },
   {
     title: "Sales Person Simulator GPT",
     description:
@@ -53,6 +102,11 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/Seller-Simulator-GPT",
     liveLink: "",
     imageUrl: "/Seller-sim.png",
+    features: [
+      "Real-time voice-based interaction",
+      "RAG (Retrieval-Augmented Generation) for accurate product information",
+      "Low-latency responses for natural conversations",
+    ]
   },
   {
     title: "Finance-Assistant",
@@ -69,9 +123,15 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/Investo-Bot",
     liveLink: "",
     imageUrl: "/investo.png",
+    features: [
+      "Real-time financial data through websockets",
+      "Personalized stock recommendations",
+      "Risk tolerance analysis",
+      "Financial metrics visualization"
+    ]
   },
   {
-    title: "Online Scalable Cloud IDE",
+    title: "Online Cloud IDE",
     description:
       "Built a fully scalable cloud-based IDE, similar to Replit, that allows developers to write, run, and collaborate on code in real-time. It supports multiple programming languages and ensures seamless scalability using Docker, Kubernetes, and Minikube.",
     tags: [
@@ -85,6 +145,12 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/my_IDE",
     liveLink: "",
     imageUrl: "/IDE.png",
+    features: [
+      "Multi-language support : python, js",
+      "Real-time code execution",
+      "Container-based isolation with Docker",
+      "Scalable infrastructure with Kubernetes"
+    ]
   },
   {
     title: "Echo-Sign Language Interpreter",
@@ -103,6 +169,12 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/Sign-Language-original",
     liveLink: "",
     imageUrl: "/sign.png",
+    features: [
+      "Real-time gesture recognition with CNN",
+      "Accurate text conversion",
+      "OpenCV for image processing",
+      "TensorFlow-based deep learning model"
+    ]
   },
   {
     title: "Anonymous Feedback System and Analysis",
@@ -121,6 +193,12 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/AnonSend",
     liveLink: "https://truefeedback.in/",
     imageUrl: "/mystry.png",
+    features: [
+      "Anonymous messaging system",
+      "AI-powered feedback analysis",
+      "Email notifications with Resend",
+      "Real-time feedback acceptance control"
+    ]
   },
   {
     title: "Text-Synth",
@@ -130,6 +208,12 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/Text-Synth",
     liveLink: "",
     imageUrl: "/synth.png",
+    features: [
+      "Transformer architecture implementation",
+      "Text generation capabilities",
+      "Multi-language translation",
+      "Document summarization"
+    ]
   },
   {
     title: "Caption Generator",
@@ -146,6 +230,12 @@ export const projectsData = [
     liveLink:
       "https://huggingface.co/spaces/LEVIII007/Visionary_Captions",
     imageUrl: "/gen.png",
+    features: [
+      "Automated image captioning",
+      "Transformer-based architecture",
+      "Deployed on Hugging Face Spaces",
+      "Interactive Streamlit interface"
+    ]
   },
   {
     title: "Chat-Sphere",
@@ -162,59 +252,44 @@ export const projectsData = [
     githubLink: "https://github.com/LEVIII007/Chat-Sphere",
     liveLink: "",
     imageUrl: "/sphere.png",
+    features: [
+      "Custom data source integration",
+      "Wikipedia and PDF support",
+      "Context-aware conversations",
+      "Langchain for advanced prompting"
+    ]
   },
-  ];
-
-  const ProjectKingData = [
-    {
-      title: "z-secure SaaS Platform",
-      description:
-        "Originally an npm package, now evolved into a full-fledged SaaS platform providing comprehensive web security solutions, including bot protection, rate limiting, SQL injection prevention, and an SDK for easy integration.",
-      tags: [
-        "Node.js",
-        "TypeScript",
-        "Express.js",
-        "Redis",
-        "PostgreSQL",
-        "AWS Lambda",
-        "Prisma",
-      ],
-      githubLink: "https://github.com/LEVIII007/zzz-Secure",
-      liveLink: "https://zsecure-documentation.vercel.app/docs",
-      imageUrl: "/zsecure.webp",
-      features : [
-        "Advanced rate limiting, bot protection, and SQL injection prevention with ultra-low latency.",
-        "Full SaaS model for businesses requiring high-security API protection.",
-        "Provides an SDK for seamless integration into various applications.",
-        "Serverless architecture for instant scaling and high availability.",
-        "Works with browser memory, Redis, and PostgreSQL.",
-        "No race conditions in memory.",
-        "TypeScript declaration bundled."
-      ]
-    }
-  ];
+];
 
 
-  
-  const Projects = () => {
-    return (
-      <div className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-4 sm:px-6 lg:px-8"
-          id="projects">
-        <div className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center mb-8">Projects</div>
-        <div className="grid grid-cols-1 gap-8">
-          {ProjectKingData.map((project) => (
-            <ProjectCardKing key={project.title} {...project} />
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
-          {projectsData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
+const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 4);
+
+  return (
+    <section aria-labelledby="projects-title" className="max-w-6xl mx-auto py-16" id="projects">
+      <h2 id="projects-title" className="text-xl font-medium mb-4">
+        Projects
+      </h2>
+      <div className="grid gap-4">
+        {displayedProjects.map((project) => (
+          <ProjectItem key={project.title} {...project} />
+        ))}
       </div>
-    )
-  }
-  
-  export default Projects
-  
+      
+      {projectsData.length > 4 && (
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-4 py-2 text-sm font-medium text-[var(--text-primary)] border border-[var(--card-border)] rounded-lg bg-[var(--card-background)] hover:bg-[var(--hover-background)] transition-colors"
+          >
+            {showAll ? 'Show Less' : `Show More (${projectsData.length - 4} more)`}
+          </button>
+        </div>
+      )}
+    </section>
+  )
+}
+
+export default Projects
   

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 const CodingProfiles: React.FC = () => {
   return (
     <div className="bg-black text-gray-100 py-8 sm:py-16">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">My Coding Profiles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <ProfileCard
