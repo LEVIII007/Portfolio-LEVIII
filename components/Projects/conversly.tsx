@@ -52,7 +52,7 @@ const ConverslyAIShowcase: React.FC = () => {
   }
 
   return (
-    <div className="relative max-w-6xl mx-auto px-4 py-16 overflow-hidden bg-black rounded-lg"
+    <div className="relative max-w-6xl mx-auto py-16 overflow-hidden bg-black rounded-lg"
     id = 'conversly'>
       {/* Background Grid with fading edges */}
       <div className="absolute inset-0 z-0 pointer-events-none"
