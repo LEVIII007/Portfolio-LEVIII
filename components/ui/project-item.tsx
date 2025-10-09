@@ -35,15 +35,15 @@ export function ProjectItem({
         <article
           role="button"
           tabIndex={0}
-          className="group relative cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
+          className="group relative cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-3 sm:p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
         >
           {/* left gradient accent */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500/20 via-cyan-500/20 to-transparent" />
 
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <h3 className="font-medium text-[var(--text-primary)]">{title}</h3>
-              <div className="flex gap-2 mt-1">
+          <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4">
+            <div className="w-full">
+              <h3 className="font-medium text-[var(--text-primary)] text-sm sm:text-base">{title}</h3>
+              <div className="flex flex-wrap gap-2 mt-1">
                 {liveLink && (
                   <Link 
                     href={liveLink} 
@@ -69,10 +69,10 @@ export function ProjectItem({
             </div>
           </div>
 
-          <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-3">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2 sm:mt-3">
             {tags.slice(0, 4).map((tag, index) => (
               <span 
                 key={index} 
@@ -90,9 +90,9 @@ export function ProjectItem({
         </article>
       </DialogTrigger>
 
-      <DialogContent className="bg-[var(--card-background)] border-[var(--card-border)] text-[var(--text-primary)] p-0 gap-0 max-w-2xl max-h-[85vh] overflow-y-auto">
-        <DialogHeader className="p-6 pb-4">
-          <DialogTitle className="text-xl">{title}</DialogTitle>
+      <DialogContent className="bg-[var(--card-background)] border-[var(--card-border)] text-[var(--text-primary)] p-0 gap-0 max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
+        <DialogHeader className="p-4 sm:p-6 pb-3 sm:pb-4">
+          <DialogTitle className="text-lg sm:text-xl">{title}</DialogTitle>
           <DialogDescription className="flex gap-4 text-[var(--text-muted)]">
             {liveLink && (
               <Link 
@@ -116,7 +116,7 @@ export function ProjectItem({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-6 p-6 pt-0">
+        <div className="space-y-4 sm:space-y-6 p-4 sm:p-6 pt-0">
           {/* Image */}
           {imageUrl && (
             <div className="overflow-hidden rounded-lg">

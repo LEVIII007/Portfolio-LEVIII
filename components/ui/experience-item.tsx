@@ -30,13 +30,13 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
         <article
           role="button"
           tabIndex={0}
-          className="group relative cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
+          className="group relative cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-3 sm:p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
         >
           {/* left gradient accent */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500/20 via-cyan-500/20 to-transparent" />
 
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex items-start gap-3 flex-1">
+          <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4">
+            <div className="flex items-start gap-2 sm:gap-3 flex-1 w-full">
               {/* Company Logo */}
               {logo && (
                 <div className="flex-shrink-0 mt-1">
@@ -49,19 +49,19 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
                   />
                 </div>
               )}
-              <div className="flex-1">
-                <h3 className="font-medium text-[var(--text-primary)]">{role}</h3>
-                <p className="text-sm text-[var(--text-muted)]">{company}</p>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-medium text-[var(--text-primary)] text-sm sm:text-base">{role}</h3>
+                <p className="text-xs sm:text-sm text-[var(--text-muted)]">{company}</p>
               </div>
             </div>
-            <time className="whitespace-nowrap text-xs text-[var(--text-muted)]">{period}</time>
+            <time className="text-xs text-[var(--text-muted)] sm:whitespace-nowrap">{period}</time>
           </div>
 
-          <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">{summary}</p>
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-[var(--text-muted)]">{summary}</p>
 
           {/* Tags */}
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-3">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2 sm:mt-3">
               {tags.slice(0, 4).map((tag, index) => (
                 <span 
                   key={index} 
@@ -80,9 +80,9 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
         </article>
       </DialogTrigger>
 
-      <DialogContent className="bg-[var(--card-background)] border-[var(--card-border)] text-[var(--text-primary)] p-0 gap-0">
-        <DialogHeader className="p-6 pb-4">
-          <div className="flex items-start gap-3">
+      <DialogContent className="bg-[var(--card-background)] border-[var(--card-border)] text-[var(--text-primary)] p-0 gap-0 max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
+        <DialogHeader className="p-4 sm:p-6 pb-3 sm:pb-4">
+          <div className="flex items-start gap-2 sm:gap-3">
             {/* Company Logo in Dialog */}
             {logo && (
               <div className="flex-shrink-0">
@@ -95,8 +95,8 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
                 />
               </div>
             )}
-            <div className="flex-1">
-              <DialogTitle className="text-xl">{role}</DialogTitle>
+            <div className="flex-1 min-w-0">
+              <DialogTitle className="text-lg sm:text-xl">{role}</DialogTitle>
               <DialogDescription className="text-[var(--text-muted)]">
                 {company} • {period}
               </DialogDescription>
@@ -139,7 +139,7 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
           </div>
         </DialogHeader>
 
-        <div className="space-y-6 p-6 pt-0">
+        <div className="space-y-4 sm:space-y-6 p-4 sm:p-6 pt-0">
           {/* summary */}
           {summary ? <p className="text-sm leading-relaxed text-[var(--text-muted)]">{summary}</p> : null}
 

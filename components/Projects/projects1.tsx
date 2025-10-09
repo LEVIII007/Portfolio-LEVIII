@@ -63,6 +63,27 @@ export const projectsData = [
       "Secure authentication and authorization with Supabase",
     ]
   },
+    // {
+  //   title: "GIST",
+  //   description:
+  //     "A subscription-based cloud storage service offering scalable and secure file storage, sharing, and quick downloads via AWS CloudFront.",
+  //   tags: [
+  //     "Node.js",
+  //     "AWS S3",
+  //     "Lambda",
+  //     "CloudFront",
+  //     "TypeScript",
+  //   ],
+  //   githubLink: "https://github.com/LEVIII007/GIST",
+  //   liveLink: "h",
+  //   imageUrl: "/cloudvault.png",
+  //   features: [
+  //     "Scalable cloud storage with AWS S3",
+  //     "Fast content delivery via CloudFront CDN",
+  //     "Serverless architecture with AWS Lambda",
+  //     "Subscription-based pricing model"
+  //   ]
+  // },
   {
     title: "Cloud Vault",
     description:
@@ -267,24 +288,24 @@ const Projects = () => {
   const displayedProjects = showAll ? projectsData : projectsData.slice(0, 4);
 
   return (
-    <section aria-labelledby="projects-title" className="max-w-6xl mx-auto py-16" id="projects">
-      <h2 id="projects-title" className="text-xl font-medium mb-4">
+    <section aria-labelledby="projects-title" className="max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-2 sm:px-0" id="projects">
+      <h2 id="projects-title" className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
         Projects
       </h2>
-      <p className="text-[var(--text-secondary)] mb-6">
+      <p className="text-[var(--text-secondary)] mb-4 sm:mb-6 text-sm sm:text-base">
         A collection of my work spanning from AI applications to full-stack projects.
       </p>
-      <div className="grid gap-4">
+      <div className="grid gap-3 sm:gap-4">
         {displayedProjects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
       </div>
       
       {projectsData.length > 4 && (
-        <div className="mt-6 flex justify-center">
+        <div className="mt-4 sm:mt-6 flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-4 py-2 text-sm font-medium text-[var(--text-primary)] border border-[var(--card-border)] rounded-lg bg-[var(--card-background)] hover:bg-[var(--hover-background)] transition-colors"
+            className="px-4 py-2 text-xs sm:text-sm font-medium text-[var(--text-primary)] border border-[var(--card-border)] rounded-lg bg-[var(--card-background)] hover:bg-[var(--hover-background)] transition-colors w-full sm:w-auto"
           >
             {showAll ? 'Show Less' : `Show More (${projectsData.length - 4} more)`}
           </button>

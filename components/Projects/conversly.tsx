@@ -52,7 +52,7 @@ const ConverslyAIShowcase: React.FC = () => {
   }
 
   return (
-    <div className="relative max-w-6xl mx-auto py-16 overflow-hidden bg-black rounded-lg"
+    <div className="relative max-w-6xl mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-0 overflow-hidden bg-black rounded-lg"
     id = 'conversly'>
       {/* Background Grid with fading edges */}
       <div className="absolute inset-0 z-0 pointer-events-none"
@@ -68,18 +68,18 @@ const ConverslyAIShowcase: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 text-white">
-      <h2 className="text-xl font-bold mb-8 text-center">A product I've been passionately building...</h2>
-      <h2 className={`text-4xl font-bold mb-8 text-center ${lobster.variable} font-[Lobster]`}>
+      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 md:mb-8 text-center">A product I've been passionately building...</h2>
+      <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center ${lobster.variable} font-[Lobster]`}>
   ConverslyAI
 </h2>
 
-        <p className={`text-2xl font-bold mb-8 text-center ${lobster.variable} font-[Lobster]`}>
+        <p className={`text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 text-center px-2 ${lobster.variable} font-[Lobster]`}>
           A SaaS chatbot provider for highly tailored business interactions
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Image Showcase */}
-          <div className="relative h-[400px] w-full">
+          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] w-full">
             <AnimatePresence>
               {features.map((feature, index) => (
                 <motion.div
@@ -116,29 +116,29 @@ const ConverslyAIShowcase: React.FC = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="text-2xl font-bold mb-4">{features[active].title}</h3>
-                <p className="text-gray-300 mb-8">{features[active].description}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">{features[active].title}</h3>
+                <p className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8">{features[active].description}</p>
               </motion.div>
             </AnimatePresence>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-4">
               {/* Dots Indicator */}
-              <div className="flex space-x-2">
+              <div className="flex space-x-1.5 sm:space-x-2">
                 {features.map((_, index) => (
                   <div
                     key={index}
-                    className={`h-2 w-2 rounded-full ${index === active ? "bg-blue-500" : "bg-gray-500"}`}
+                    className={`h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full ${index === active ? "bg-blue-500" : "bg-gray-500"}`}
                   />
                 ))}
               </div>
 
               {/* Navigation Buttons */}
-              <div className="flex space-x-4">
-                <Button onClick={handlePrev} variant="outline" size="icon">
-                  <IconArrowLeft className="h-4 w-4" />
+              <div className="flex space-x-2 sm:space-x-4">
+                <Button onClick={handlePrev} variant="outline" size="icon" className="h-8 w-8 sm:h-10 sm:w-10">
+                  <IconArrowLeft className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button onClick={handleNext} variant="outline" size="icon">
-                  <IconArrowRight className="h-4 w-4" />
+                <Button onClick={handleNext} variant="outline" size="icon" className="h-8 w-8 sm:h-10 sm:w-10">
+                  <IconArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
@@ -146,8 +146,8 @@ const ConverslyAIShowcase: React.FC = () => {
         </div>
 
         {/* Call-to-Action */}
-        <div className="mt-16 text-center">
-          <Button asChild size="lg">
+        <div className="mt-8 sm:mt-12 md:mt-16 text-center">
+          <Button asChild size="default" className="text-sm sm:text-base px-4 sm:px-6">
             <a href="https://conversly.shashankkk.site" target="_blank" rel="noopener noreferrer">
               Visit Conversly.ai
             </a>

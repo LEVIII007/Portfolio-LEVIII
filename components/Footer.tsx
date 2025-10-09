@@ -7,12 +7,12 @@ import { MdOutlineEmail } from "react-icons/md";
 const Contact = () => {
   return (
     <div id = "contact" className="bg-black">
-      <div className="pl-16 pr-8 md:pl-28 md:pr-20 sm:pl-18 sm:pr-10 py-12 max-w-6xl mx-auto">
+      <div className="px-4 sm:px-8 md:px-10 lg:pl-28 lg:pr-20 py-8 sm:py-10 md:py-12 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 justify-start mb-2.5 font-bold">
-          <FaLink className="size-5" />
-          <div className="text-xl xl:text-2xl"> Connect with me</div>
+          <FaLink className="size-4 sm:size-5" />
+          <div className="text-lg sm:text-xl xl:text-2xl"> Connect with me</div>
         </div>
-        <div className="flex items-center sm:gap-2 justify-center text-lg text-neutral-400 font-medium flex-col sm:flex-row">
+        <div className="flex items-center sm:gap-2 justify-center text-sm sm:text-base md:text-lg text-neutral-400 font-medium flex-col sm:flex-row">
           <div className="flex-1 w-full">
             <Link
               className="flex items-center gap-2 justify-start mb-2  hover:text-white hover:underline"
