@@ -11,14 +11,14 @@ export function BlogItem({ title, description, date, link }: Blog) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
+      className="group relative block cursor-pointer rounded-xl border border-[var(--card-border)] bg-[var(--card-background)] p-3 sm:p-4 shadow-sm transition-colors hover:bg-[var(--hover-background)] focus:outline-none focus:ring-2 focus:ring-ring/40"
     >
       {/* left gradient accent */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500/20 via-cyan-500/20 to-transparent" />
 
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex-1">
-          <h3 className="font-medium text-[var(--text-primary)]">
+      <div className="flex items-start justify-between gap-3 sm:gap-4">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-medium text-[var(--text-primary)] text-sm sm:text-base">
             {title}
           </h3>
           <time className="mt-1 block text-xs text-[var(--text-muted)]">{date}</time>
@@ -26,7 +26,7 @@ export function BlogItem({ title, description, date, link }: Blog) {
         
         {/* External link icon */}
         <svg
-          className="h-5 w-5 text-[var(--text-muted)] flex-shrink-0"
+          className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--text-muted)] flex-shrink-0"
           fill="none"
           strokeWidth="2"
           stroke="currentColor"
@@ -40,7 +40,7 @@ export function BlogItem({ title, description, date, link }: Blog) {
         </svg>
       </div>
 
-      <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
+      <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
     </a>
   )
 }

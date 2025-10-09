@@ -6,7 +6,7 @@ import SmallNav from "./RetractableNav";
 export default function Navbar() {
   return (
     <div className="border-b bg-black z-50 relative bg-opacity-50 transition-opacity duration-500 ease-out transform opacity-100 translate-y-0">
-      <div className="flex items-center justify-between p-5 lg:container">
+      <div className="flex items-center justify-between px-4 py-4 sm:p-5 lg:container">
         <div className="flex items-center gap-5 ">
           <Link href="/">
             <Image src="/logo_st.webp" alt="Logo" width={30} height={30} />

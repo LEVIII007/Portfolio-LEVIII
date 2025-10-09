@@ -67,6 +67,6 @@ export const blogs = [
     title: "Change Data Capture with Debezium and PostgreSQL",
     description: "How we built and utilized the CDC feature of postgres to build real-time data pipelines.",
     date: "Dec 5, 2023",
-    link: "https://medium.com/@tyagishashank118/change-data-capture-with-debezium-and-postgresql-9b16ce02f778",
+    link: "https://medium.com/@tyagishashank118/real-time-change-data-capture-with-debezium-and-postgresql-50f3db656ca5",
   },
 ]
