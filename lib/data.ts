@@ -54,19 +54,19 @@ export const blogs = [
   {
     title: "High level architecture of real-time voice agents",
     description: "Design and implementation of scalable real-time voice applications.",
-    date: "Jan 15, 2024",
+    date: "Aug 20, 2025",
     link: "https://medium.com/@tyagishashank118/high-level-architecture-of-real-time-voice-agents-ddcedb251fc4"
   },
   {
     title: "Monitoring Microservices on a Budget: Our Journey with SigNoz",
     description: "How we implemented observability in our microservices architecture without breaking the bank.",
-    date: "Dec 5, 2023",
+    date: "Sept 22, 2025",
     link: "https://medium.com/@tyagishashank118/monitoring-microservices-on-a-budget-our-journey-with-signoz-9b16ce02f778",
   },
   {
     title: "Change Data Capture with Debezium and PostgreSQL",
     description: "How we built and utilized the CDC feature of postgres to build real-time data pipelines.",
-    date: "Dec 5, 2023",
+    date: "Oct 5, 2025",
     link: "https://medium.com/@tyagishashank118/real-time-change-data-capture-with-debezium-and-postgresql-50f3db656ca5",
   },
 ]
