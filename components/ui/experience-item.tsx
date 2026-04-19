@@ -39,13 +39,13 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
             <div className="flex items-start gap-2 sm:gap-3 flex-1 w-full">
               {/* Company Logo */}
               {logo && (
-                <div className="flex-shrink-0 mt-1">
+                <div className="flex-shrink-0 mt-1 w-9 h-9 rounded-lg border border-[var(--card-border)] bg-white/5 flex items-center justify-center p-1">
                   <Image
                     src={logo}
                     alt={`${company} logo`}
-                    width={32}
-                    height={32}
-                    className="rounded-md object-contain"
+                    width={28}
+                    height={28}
+                    className="object-contain"
                   />
                 </div>
               )}
@@ -85,13 +85,13 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
           <div className="flex items-start gap-2 sm:gap-3">
             {/* Company Logo in Dialog */}
             {logo && (
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-[var(--card-border)] bg-white/5 flex items-center justify-center p-1.5">
                 <Image
                   src={logo}
                   alt={`${company} logo`}
-                  width={48}
-                  height={48}
-                  className="rounded-lg object-contain"
+                  width={40}
+                  height={40}
+                  className="object-contain"
                 />
               </div>
             )}
