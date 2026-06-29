@@ -32,7 +32,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild size="sm" className="w-full sm:w-auto text-sm px-4 py-2">
-                <Link href="/Shashank_tyagi_res_01.pdf" target="_blank" rel="noopener noreferrer">
+                <Link href="/Shashankk_resume.pdf" target="_blank" rel="noopener noreferrer">
                   <FaDownload className="mr-2" />
                   Download My Resume
                 </Link>
