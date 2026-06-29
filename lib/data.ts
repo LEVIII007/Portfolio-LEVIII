@@ -2,7 +2,7 @@ export const experience = [
   {
     company: "Mindtickle",
     role: "Software Engineering Intern",
-    period: "Oct 2025 — Present",
+    period: "Nov 2025 — Present",
     summary: "Building async bulk operations infrastructure for enterprise admins, handling up to 500K learners across distributed gRPC services on AWS.",
     details: [
       "Built an async Bulk modules/learners settings update feature for enterprise admins in a team of 3 — server-side filter/selection resolution with fan-out execution via AWS Step Functions + Lambda, handling up to 500K learners and 100+ modules in a single operation.",
@@ -15,6 +15,7 @@ export const experience = [
     companyWebsite: "https://www.mindtickle.com",
     companyTwitter: "https://x.com/mindtickle",
     tags: ["Go", 'typescript', "AWS Lambda", "Step Functions", "S3", "gRPC", "GitLab CI/CD"],
+    caseStudySlug: "bulk-actions",
   },
   // {
   //   company: "Morphle Labs (YC W20)",
@@ -51,7 +52,7 @@ export const experience = [
   {
     company: "Trench Exchange",
     role: "Founding Backend Engineer",
-    period: "May 2025 — Oct 2025",
+    period: "May 2025 — Nov 2025",
     summary: "Developed automated trading services and optimized databases for high-performance Solana DEX operations.",
     details: [
       "Worked on building backend infrastructure for high performance Solana DEX.",
@@ -64,6 +65,7 @@ export const experience = [
     companyWebsite: "https://trench.ag",
     companyTwitter: "https://x.com/TrenchExchange",
     tags: ["Go", "Ts", "Web3", "PostgreSQL", "ClickHouse", "AWS", "Redis", "Infra"],
+    caseStudySlug: "copy-trading",
   },
   {
     company: "Heizen (Opengig)",
@@ -80,21 +82,21 @@ export const experience = [
     companyTwitter: "https://x.com/HeizenOfficial",
     tags: ["FastAPI", "NestJS", "Python", "TypeScript", "LangGraph", "PostgreSQL", "Docker"],
   },
-  {
-    company: "Indiacharts",
-    role: "Backend Developer Intern",
-    period: "Nov 2024 — Jan 2025",
-    summary: "Re-architected real-time analytics backend for high-throughput stock data processing and indicator computation.",
-    details: [
-      "Re-architected the real-time analytics backend to handle high-throughput OHLC data for 3,000+ stocks, enabling consistent sub-second indicator computation during peak market hours.",
-      "Built scalable pipelines to compute 100+ technical indicators across multiple timeframes, balancing accuracy, latency, and system cost using distributed workers and optimized vectorized processing.",
-    ],
-    links: [],
-    logo: "/indiacharts.png",
-    companyWebsite: "https://indiacharts.com",
-    companyTwitter: "https://twitter.com/indiacharts",
-    tags: ["Python", "FastAPI", "Redis", "PostgreSQL", "Polars ", "Pandas", "WebSockets", "Docker"],
-  },
+  // {
+  //   company: "Indiacharts",
+  //   role: "Backend Developer Intern",
+  //   period: "Nov 2024 — Jan 2025",
+  //   summary: "Re-architected real-time analytics backend for high-throughput stock data processing and indicator computation.",
+  //   details: [
+  //     "Re-architected the real-time analytics backend to handle high-throughput OHLC data for 3,000+ stocks, enabling consistent sub-second indicator computation during peak market hours.",
+  //     "Built scalable pipelines to compute 100+ technical indicators across multiple timeframes, balancing accuracy, latency, and system cost using distributed workers and optimized vectorized processing.",
+  //   ],
+  //   links: [],
+  //   logo: "/indiacharts.png",
+  //   companyWebsite: "https://indiacharts.com",
+  //   companyTwitter: "https://twitter.com/indiacharts",
+  //   tags: ["Python", "FastAPI", "Redis", "PostgreSQL", "Polars ", "Pandas", "WebSockets", "Docker"],
+  // },
 ]
 
 export const stack = ["TypeScript", "Next.js", "React Server Components", "SWR", "Tailwind CSS", "shadcn/ui", "Vercel"]

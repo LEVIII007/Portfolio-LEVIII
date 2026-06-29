@@ -9,6 +9,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import Image from "next/image"
+import Link from "next/link"
+import { IconArrowRight, IconSparkles } from "@tabler/icons-react"
 
 type Experience = {
   company: string
@@ -21,9 +23,10 @@ type Experience = {
   companyWebsite?: string
   companyTwitter?: string
   tags?: string[]
+  caseStudySlug?: string
 }
 
-export function ExperienceItem({ company, role, period, summary, details = [], links = [], logo, companyWebsite, companyTwitter, tags = [] }: Experience) {
+export function ExperienceItem({ company, role, period, summary, details = [], links = [], logo, companyWebsite, companyTwitter, tags = [], caseStudySlug }: Experience) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -76,6 +79,19 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
                 </span>
               )}
             </div>
+          )}
+
+          {/* Best Work deep-dive link */}
+          {caseStudySlug && (
+            <Link
+              href={`/best-work/${caseStudySlug}`}
+              onClick={(e) => e.stopPropagation()}
+              className="group/cta mt-3 inline-flex items-center gap-1.5 rounded-lg border border-blue-500/30 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 px-3 py-1.5 text-xs font-medium text-[var(--text-primary)] transition-colors hover:from-blue-500/20 hover:to-cyan-500/20"
+            >
+              <IconSparkles size={13} className="text-cyan-400" />
+              View Best Work
+              <IconArrowRight size={13} className="transition-transform group-hover/cta:translate-x-0.5" />
+            </Link>
           )}
         </article>
       </DialogTrigger>
@@ -153,6 +169,20 @@ export function ExperienceItem({ company, role, period, summary, details = [], l
               ))}
             </ul>
           ) : null}
+
+          {/* Best Work deep-dive CTA */}
+          {caseStudySlug && (
+            <Link
+              href={`/best-work/${caseStudySlug}`}
+              className="group/cta flex items-center justify-between gap-3 rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 px-4 py-3 transition-colors hover:from-blue-500/20 hover:to-cyan-500/20"
+            >
+              <span className="flex items-center gap-2">
+                <IconSparkles size={18} className="text-cyan-400" />
+                <span className="text-sm font-medium text-[var(--text-primary)]">Read the engineering deep-dive</span>
+              </span>
+              <IconArrowRight size={16} className="text-[var(--text-muted)] transition-transform group-hover/cta:translate-x-0.5" />
+            </Link>
+          )}
 
           {/* links */}
           {links.length > 0 ? (
